@@ -1,0 +1,12 @@
+Simple CMS (actually CMF) for sites without high traffic
+(3 sites on zame cms, each with 5k-10k pageviews per day feels good
+at low-end VPS: 0.1% cpu load, 200mb used memory, lighty as web server).
+
+Currently there is no any examples or documentation, sorry.
+
+Obliviously, refactoring required. Things to do:
+
+* Re-create s-js from scratch: use selectors instead of node.parentNode.parentNode.parentNode
+* Use ajax in admin (instead of iframe)
+* Admin interface for mobile phones
+* More form elements
