@@ -1,0 +1,622 @@
+/*
+ * MIT License (http://www.opensource.org/licenses/mit-license.php)
+ *
+ * Copyright (c) 2007, Slava Tretyak (aka restorer)
+ * Zame Software Development (http://zame-dev.org)
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in
+ * all copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+ * THE SOFTWARE.
+ *
+ * [S]imple
+ * http://sourceforge.net/projects/zame-simple
+ *
+ * To work correctly in IE, doctype must be "XHTML 1.0 Strict"
+ */
+
+.s-mask {
+	position: fixed;
+	*position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	*height: auto;
+	z-index: 90000;
+	background-color: #000;
+	opacity: .5;
+	filter:progid:DXImageTransform.Microsoft.Alpha(opacity=50);
+}
+
+.s-error {
+	position: fixed;
+	*position: absolute;
+	top: 0;
+	left: 0;
+	height: auto;
+	margin: 20px;
+	border: 5px solid red;
+	padding: 10px;
+	color: red;
+	font-family: Tahoma,Arial,sans-serif;
+	font-size: 14px;
+	background-color: #000;
+	z-index: 90010;
+	overflow: auto;
+	width: auto;
+	max-height: 500px;
+	max-width: 1000px;
+}
+
+.s-error-close {
+	background-color: red;
+	color: #FFF;
+	padding-left: 0.2em;
+	padding-right: 0.3em;
+	font-weight: bold;
+	cursor: pointer;
+	*cursor: hand;
+}
+
+.s-error-title {
+	white-space: nowrap;
+	padding-right: 10px;
+}
+
+/*
+ * Button
+ */
+
+.s-btn, .s-tb-btn {
+	height: 21px;
+	display: inline-block;
+	zoom: 1;
+	*display: inline;
+	position: relative;
+	padding: 0 3px;
+	cursor: pointer;
+	cursor: hand;
+	vertical-align: -1px;
+	*vertical-align: 1px;
+}
+
+.s-btn .s-btn-before, .s-tb-btn .s-btn-before {
+	display: block;
+	width: 3px;
+	height: 21px;
+	background: url(img/button.gif) 0 0 no-repeat;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.s-btn .s-btn-inner, .s-tb-btn .s-btn-inner {
+	zoom: 1;
+	*display: inline;
+	height: 21px;
+	line-height: 21px;
+	*line-height: 19px;
+	font-family: Tahoma, Arial;
+	font-size: 12px;
+	background: url(img/button.gif) 0 -42px repeat-x;
+	color: #000;
+}
+
+.s-btn .s-btn-inner span, .s-tb-btn .s-btn-inner span {
+	zoom: 1;
+	padding: 0 5px;
+}
+
+.s-btn .s-btn-after, .s-tb-btn .s-btn-after {
+	display: block;
+	width: 3px;
+	height: 21px;
+	background: url(img/button.gif) 0 -21px no-repeat;
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+
+.s-btn-hover .s-btn-before {
+	background-position: 0 -63px;
+}
+
+.s-btn-hover .s-btn-inner {
+	background-position: 0 -105px;
+}
+
+.s-btn-hover .s-btn-after {
+	background-position: 0 -84px;
+}
+
+.s-btn-pressed .s-btn-before {
+	background-position: 0 -63px;
+}
+
+.s-btn-pressed .s-btn-inner {
+	background-position: 0 -126px;
+}
+
+.s-btn-pressed .s-btn-after {
+	background-position: 0 -84px;
+}
+
+.s-btn-focus .s-btn-before {
+	background-position: 0 -147px;
+}
+
+.s-btn-focus .s-btn-inner {
+	background-position: 0 -189px;
+}
+
+.s-btn-focus .s-btn-after {
+	background-position: 0 -168px;
+}
+
+.s-btn-disabled {
+	cursor: default;
+}
+
+.s-btn-disabled .s-btn-inner {
+	color: #AAA;
+}
+
+/*
+ * Toolbar Button
+ */
+
+.s-tb-btn .s-btn-before {
+	background: none;
+}
+
+.s-tb-btn .s-btn-inner {
+	background: none;
+}
+
+.s-tb-btn .s-btn-after {
+	background: none;
+}
+
+.s-tb-btn-hover .s-btn-before {
+	background: url(img/toolbar-button.gif) 0 0 no-repeat;
+}
+
+.s-tb-btn-hover .s-btn-inner {
+	background: url(img/toolbar-button.gif) 0 -42px repeat-x;
+}
+
+.s-tb-btn-hover .s-btn-after {
+	background: url(img/toolbar-button.gif) 0 -21px no-repeat;
+}
+
+.s-tb-btn-pressed .s-btn-before {
+	background: url(img/toolbar-button.gif) 0 -63px no-repeat;
+}
+
+.s-tb-btn-pressed .s-btn-inner {
+	background: url(img/toolbar-button.gif) 0 -105px repeat-x;
+}
+
+.s-tb-btn-pressed .s-btn-after {
+	background: url(img/toolbar-button.gif) 0 -84px no-repeat;
+}
+
+/*
+ * Input
+ */
+
+.s-inp-wrap {
+	position: relative;
+	top: -3px;
+}
+
+.s-inp {
+	height: 21px;
+	line-height: 19px;
+	border: 1px solid #B5B8C8;
+	background: #FFF url(img/input-bg.gif) left top repeat-x;
+	font-family: Tahoma, Arial;
+	font-size: 12px;
+	padding: 2px 2px 0 2px;
+	*padding-top: 0;
+	width: 98%;
+}
+
+.s-inp-focus {
+	border: 1px solid #7EADD9;
+}
+
+.s-inp-textarea {
+	height: auto;
+	margin: 0;
+}
+
+.s-inp-form {
+	margin: 0;
+	padding: 0;
+}
+
+/*
+ * InputFile
+ */
+
+.s-inp-file-cont {
+	position: relative;
+	height: 21px;
+	display: inline-block;
+	*display: inline;
+	*zoom: 1;
+}
+
+.s-inp-file-label {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 21px;
+	display: block;
+	overflow: hidden;
+	cursor: pointer;
+	z-index: 100;
+}
+
+.s-inp-file-input {
+	position: relative;
+	z-index: 20;
+	height: 100%;
+	width: auto;
+	opacity: 0;
+	*margin-left: -40px;
+	-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+	*filter:progid:DXImageTransform.Microsoft.Alpha(opacity=0);
+}
+
+.s-inp-file-text {
+	white-space: nowrap;
+	padding-left: 5px;
+	vertical-align: -2px;
+	*vertical-align: 2px;
+}
+
+/*
+ * CheckBox
+ */
+
+.s-chb label {
+	vertical-align: 2px;
+	padding-left: 5px;
+}
+
+/*
+ * Toolbar
+ */
+
+.s-tlb {
+	width: 100%;
+	height: 26px;
+	background: #D0DEF0 url(img/toolbar-bg.gif) left top repeat-x;
+	border-bottom: 1px solid #A9BFD3;
+	padding: 0 5px;
+}
+
+.s-tlb td {
+	white-space: nowrap;
+	padding: 0 2px;
+}
+
+.s-tbl-sep {
+	width: 100%;
+}
+
+/*
+ * Navigator
+ */
+
+.s-nav {
+	background-color: #FFF;
+	border: 1px solid #A9BFD3;
+	position: relative;
+	*zoom: 1;
+}
+
+.s-nav .s-nav-hdr {
+	position: absolute;
+	top: 0;
+	*top: 1px;
+	left: 0;
+	height: 24px;
+}
+
+.s-nav .s-nav-hdr div {
+	position: absolute;
+	top: 0;
+	font-family: Tahoma, Arial;
+	font-size: 12px;
+	background: #F9F9F9 url(img/nav-header-bg.gif) left top repeat-x;
+	white-space: nowrap;
+	border-left: 1px solid #EEEEEE;
+	border-right: 1px solid #D0D0D0;
+	border-bottom: 1px solid #D0D0D0;
+	padding: 4px 5px 0 5px;
+	height: 19px;
+}
+
+.s-nav .s-nav-wrap {
+	position: relative;
+	overflow: auto;
+}
+
+.s-nav-wrap .s-nav-tbl {
+	width: 100%;
+	font-family: Tahoma, Arial;
+	font-size: 12px;
+}
+
+.s-nav-tbl th, .s-nav-tbl td {
+	height: 24px;
+	text-align: left;
+	padding: 0 5px;
+	color: #000;
+}
+
+.s-nav .s-nav-hdr span {
+	color: #000;
+	text-decoration: underline;
+	cursor: pointer;
+	*cursor: hand;
+}
+
+.s-nav-tbl th {
+	font-weight: normal;
+	vertical-align: middle;
+	white-space: nowrap;
+	border-left: 1px solid #EEEEEE;
+	border-right: 1px solid #D0D0D0;
+	border-bottom: 1px solid #D0D0D0;
+}
+
+.s-nav-tbl td {
+	border-top: 1px solid #FFFFFF;
+	border-bottom: 1px solid #EDEDED;
+	cursor: pointer;
+	*cursor: hand;
+}
+
+.s-nav-tbl .s-nav-chb {
+	width: 24px;
+}
+
+.s-nav-tbl .s-nav-like-chb {
+	min-width: 0;
+}
+
+.s-nav-tbl td {
+	white-space: normal;
+}
+
+.s-nav-tbl td.s-nav-first {
+	border-left: 1px solid #FFFFFF;
+}
+
+.s-nav-tbl td.s-nav-last {
+	border-right: 1px solid #EDEDED;
+}
+
+.s-nav-tbl .s-nav-alt {
+	background-color: #FAFAFA;
+}
+
+.s-nav-tbl .s-nav-empty td {
+	color: #888;
+	text-align: center;
+	border: none;
+	cursor: default;
+}
+
+.s-nav-tbl .s-nav-hover td {
+	background: #EFEFEF url(img/nav-row-hover.gif) left top repeat-x;
+	border-top: 1px solid #DDD;
+	border-bottom: 1px solid #DDD;
+}
+
+.s-nav-tbl .s-nav-hover td.s-nav-first {
+	border-left: 1px solid #DDD;
+}
+
+.s-nav-tbl .s-nav-hover td.s-nav-last {
+	border-right: 1px solid #DDD;
+}
+
+.s-nav-tbl .s-nav-act td {
+	background: #DFE8F6;
+	border-top: 1px dotted #A3BAE9;
+	border-bottom: 1px dotted #A3BAE9;
+}
+
+.s-nav-tbl .s-nav-act td.s-nav-first {
+	border-left: 1px dotted #A3BAE9;
+}
+
+.s-nav-tbl .s-nav-act td.s-nav-last {
+	border-right: 1px dotted #A3BAE9;
+}
+
+.s-nav-pager {
+	font-family: Tahoma, Arial;
+	font-size: 12px;
+	background: #A9BFD3;
+	padding: 5px;
+	height: 32px;
+}
+
+/*
+ * FormView
+ */
+
+.s-form {
+	font-family: Tahoma, Arial;
+	font-size: 12px;
+	border: 1px solid #99BBE8;
+	background-color: #DFE8F6;
+}
+
+.s-form caption.s-form-e {
+	text-align: left;
+	white-space: nowrap;
+	font-weight: bold;
+	background: #99BBE8 url(img/form-caption.gif) left top repeat-x;
+	border-left: 1px solid #99BBE8;
+	border-right: 1px solid #99BBE8;
+	padding: 2px 5px 0 5px; /* was: 0 5px */
+	color: #15428B;
+	height: 24px;
+	line-height: 24px;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+	.s-form caption.s-form-e {
+		margin-right: -2px;
+	}
+}
+
+.s-form th.s-form-e {
+	font-weight: normal;
+	text-align: left;
+	padding: 5px 0px 5px 15px;
+	white-space: nowrap;
+}
+
+.s-form td.s-form-e {
+	padding: 5px 20px 5px 15px;
+}
+
+.s-form .s-form-info {
+	padding-left: 5px;
+	white-space: nowrap;
+	vertical-align: 4px;
+}
+
+.s-form .s-form-error-el
+{
+	border: 1px solid #F88;
+}
+
+.s-form td.s-form-error {
+	color: red;
+	font-weight: bold;
+	padding-bottom: 10px;
+}
+
+.s-form .s-form-error-info {
+	color: red;
+	padding-top: 2px;
+	padding-bottom: 2px;
+}
+
+.s-form td.s-form-info-msg {
+	color: blue;
+	font-weight: bold;
+}
+
+.s-form-first th.s-form-e,
+.s-form-first td.s-form-e {
+	padding-top: 15px;
+}
+
+.s-form-buttons td.s-form-e {
+	padding-bottom: 15px;
+}
+
+.s-form table td.s-form-e {
+	padding: 0;
+	font-size: 12px;
+}
+
+/*
+ * DateSelector
+ */
+
+.s-date td {
+	padding: 0;
+}
+
+.s-date .s-date-inp {
+	width: 100%;
+}
+
+.s-date .s-date-inp input {
+	width: 100%;
+}
+
+.s-date .s-date-btn {
+	padding-left: 5px;
+}
+
+/*
+ * PopupLayer
+ */
+
+.s-pop {
+	position: absolute;
+	background-color: #FFF;
+	border: 1px solid #99BBE8;
+	z-index: 1000;
+}
+
+/*
+ * Pager
+ */
+
+.s-pager table {
+	border-collapse: collapse;
+	width: 100%;
+	font-size: 11px;
+}
+
+.s-pager td {
+	padding: 2px;
+	text-align: center;
+	text-decoration: underline;
+	cursor: pointer;
+	*cusror: hand;
+}
+
+.s-pager td.s-pager-sel {
+	background-color: #DFE8F6;
+	text-decoration: none;
+	font-weight: bold;
+}
+
+.s-pager th {
+	padding: 5px 0 0 0;
+	font-size: 1px;
+}
+
+.s-pager-bar {
+	position: relative;
+	height: 8px;
+	background-color: #DFE8F6;
+	cursor: pointer;
+	*cursor: hand;
+}
+
+.s-pager-thumb {
+	position: absolute;
+	top: 0;
+	height: 8px;
+	background-color: #000;
+}

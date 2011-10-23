@@ -1,0 +1,140 @@
+/*
+ * MIT License (http://www.opensource.org/licenses/mit-license.php)
+ *
+ * Copyright (c) 2007, Slava Tretyak (aka restorer)
+ * Zame Software Development (http://zame-dev.org)
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in
+ * all copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+ * THE SOFTWARE.
+ *
+ * Zame CMS
+ */
+
+html {
+	height: 100%;
+}
+
+body {
+	height: 100%;
+	padding: 0;
+	margin: 0;
+	font-family: "Trebuchet MS", Tahoma, Arial, sans-serif;
+	background-color: #FFF;
+	overflow: hidden;
+}
+
+td {
+	font-family: "Trebuchet MS", Tahoma, Arial, sans-serif;
+}
+
+a img {
+	border: none;
+}
+
+.error {
+	color: red;
+}
+
+.login-wrapper {
+	background-color: #D0DEF0;
+}
+
+.z-wrap {
+	width: 100%;
+	height: 100%;
+}
+
+.z-wrap .z-tabs-top td {
+	background-color: #DFE8F6;
+	height: 4px;
+	font-size: 4px;
+}
+
+.z-wrap .z-tabs {
+	background-color: #DFE8F6;
+	height: 28px;
+	white-space: nowrap;
+}
+
+.z-wrap .z-tabs td {
+	border-bottom: 1px solid #A9BFD3;
+	padding: 1px 6px 0px 6px;
+	font-size: 13px;
+}
+
+.z-wrap .z-tabs td a {
+	color: #00F;
+}
+
+.z-wrap .z-tabs td.z-pad {
+	padding: 0 0 0 5px;
+	width: 1px;
+	font-size: 1px;
+}
+
+.z-wrap .z-tabs td.z-sel {
+	border-top: 1px solid #A9BFD3;
+	border-left: 1px solid #A9BFD3;
+	border-right: 1px solid #A9BFD3;
+	border-bottom: 1px solid #FFF;
+	background-color: #FFF;
+}
+
+#upload-wrap {
+	padding-left: 20px;
+}
+
+.z-content-wrap {
+	height: 100%;
+	overflow: auto;
+}
+
+.z-content {
+	padding: 8px;
+	font-size: 13px;
+}
+
+.z-line {
+	white-space: nowrap;
+}
+
+.z-rm {
+	background-color: #F00;
+	color: #FFF;
+	font-weight: bold;
+	padding: 2px;
+	display: inline-block;
+	line-height: 8px;
+	cursor: pointer;
+
+	*display: inline;
+	*zoom: 1;
+	*cursor: hand;
+}
+
+.z-item {
+	color: #00F;
+	text-decoration: underline;
+	cursor: pointer;
+
+	*cursor: hand;
+}
+
+.z-below-tabs {
+	height: 100%;
+}

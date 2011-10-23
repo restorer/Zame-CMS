@@ -1,0 +1,24 @@
+body {
+	padding: 0;
+	margin: 0;
+
+	font-family: Tahoma, Arial;
+	font-size: 1em;
+	color: #000;
+
+	background-color: #CCC;
+}
+
+.sys-error {
+	font-size: 2em;
+	margin: 2em;
+	border: 2px solid #F88;
+	background-color: #FFF;
+	padding: 2em;
+	text-align: center;
+	color: #F00;
+
+	border-radius: 0.5em;
+	-moz-border-radius: 0.5em;
+	-webkit-border-radius: 0.5em;
+}
